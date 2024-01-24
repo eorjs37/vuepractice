@@ -4,6 +4,8 @@
     <h2>{{ text }}</h2>
     <input type="text" v-model="text">
     <input type="text" :value="oneway">
+    <button @click="clickButton">버튼</button>
+    <h1>{{ addIcon }}</h1>
   </div>
 </template>
 
@@ -17,6 +19,16 @@ export default {
     return {
       text: "안녕하세요",
       oneway: 'Hello <br/> World'
+    }
+  },
+  methods: {
+    clickButton() {
+      alert("clickButton")
+    }
+  },
+  computed: {
+    addIcon() {
+      return `🐏 ${this.text} 🦤`
     }
   }
 }

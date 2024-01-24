@@ -173,8 +173,69 @@ a {
 ```
 
 ## methods
+```
+말그대로 함수 이며, 함수명(){} 으로 사용가능하다.
+```
 
+```html
+<template>
+  <div class="hello">
+    <button @click="clickButton">버튼</button>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  props: {
+    msg: String
+  },
+  data() {
+    return {
+      text: "안녕하세요",
+      oneway: 'Hello <br/> World'
+    }
+  },
+  methods: {
+    clickButton() {
+      alert("clickButton")
+    }
+  }
+}
+</script>
+```
 ## computed
+```
+원본 데이터를 변하지 않으면서, 원본데이터를 바꾸고 싶을때 사용된다.
+```
+```html
+<template>
+  <div class="hello">
+    <h1>{{ addIcon }}</h1>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  props: {
+    msg: String
+  },
+  data() {
+    return {
+      text: "안녕하세요",
+      oneway: 'Hello <br/> World'
+    }
+  },
+  computed: {
+    addIcon() {
+      return `🐏 ${this.text} 🦤`
+    }
+  }
+}
+</script>
+```
+
 
 ## watch
 
