@@ -7,8 +7,9 @@ export default{
     title:'ButtonComp',
     tags:['autodocs'],
     args:{
-        // onClick:action('clicked'),
-        onCustomClick:action('onCustomClick')
+        onCustomClick:action('onCustomClick',{
+            depth:100
+        })
     }
 }
 
