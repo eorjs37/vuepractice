@@ -7,21 +7,15 @@ export default{
     title:'ButtonComp',
     tags:['autodocs'],
     args:{
-        onBtnClick:action('btn-click')
+        // onClick:action('clicked'),
+        onCustomClick:action('onCustomClick')
     }
-    // argTypes:{
-    //     onBtnClick:{
-    //         action:'btn-click'
-    //     }
-    // }
 }
 
-export const actionsData = {
-    onBtnClick:action('btn-click')
-}
 
 export const Default = {
     args:{
-        btnname:'버튼1'
+        btnname:'버튼',
+        
     }
 }

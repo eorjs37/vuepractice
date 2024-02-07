@@ -1,10 +1,10 @@
 <template>
-    <button @click="btnClick">{{ btnname }}</button>
+    <button class="common_btn" @click="customClick">{{ btnname }}</button>
 </template>
 <script>
 export default {
     name: 'ButtonComp',
-    emits:['btn-click'],
+    emits:['btn-click','custom-click'],
     props:{
         btnname:{
             type:String,
@@ -23,9 +23,23 @@ export default {
     },
 
     methods: {
-        btnClick(){
-            this.$emit('btn-click')
+        clicked(){
+            this.customClick();
+        },
+        customClick(event){
+            this.$emit('custom-click', event);
         }
     },
 };
 </script>
+<style scoped>
+.common_btn{
+    padding: 10px;
+    background-color: var(--primary);
+    color: var(--light);
+    line-height: 1.2;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+</style>
